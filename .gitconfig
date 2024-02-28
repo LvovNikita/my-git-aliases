@@ -1,0 +1,31 @@
+[user]
+	email = 
+	name = 
+[init]
+	defaultBranch = master
+[credential]
+	helper = store
+[color]
+	ui = auto
+[core]
+	editor = vim
+[alias]
+  aliases = config --get-regexp "alias."
+  amend = commit --amend
+  branchinfo = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  branchrename = branch -m
+  branchdelete = branch -D
+  branchmerges = branch --merged
+  branchupstream = branch --set-upstream-to
+  commitback = checkout HEAD^
+  commitundo = reset --soft HEAD^
+  coutdevelop = checkout develop
+  discard = reset HEAD --hard
+  diffdevelop = log HEAD..develop
+  diffstaged = diff --staged
+  fetchorigin = fetch origin
+  fileundo = restore
+  fileunstage = restore --staged
+  logpretty = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  pushorigin = push origin HEAD
+  search = grep
