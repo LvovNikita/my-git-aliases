@@ -11,12 +11,15 @@
   editor = vim
 [alias]
   aliases = config --get-regexp "alias."
+  all = add .
   amend = commit --amend
   branchinfo = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
   branchrename = branch -m
   branchdelete = branch -D
   branchmerges = branch --merged
   branchupstream = branch --set-upstream-to
+  c = commit -m
+  coutb = checkout -b
   commitback = checkout HEAD^
   commitundo = reset --soft HEAD^
   coutdevelop = checkout develop
@@ -28,4 +31,5 @@
   fileunstage = restore --staged
   logpretty = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pushorigin = push origin HEAD
+  s = status
   search = grep
