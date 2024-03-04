@@ -14,22 +14,34 @@
   all = add .
   amend = commit --amend
   branchinfo = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  # Указать в кавычках имя новой ветки
   branchrename = branch -m
   branchdelete = branch -D
   branchmerges = branch --merged
+  # Укзать имя ветки
   branchupstream = branch --set-upstream-to
+  # Указать сообщение в кавычках
   c = commit -m
+  check = diff --check
+  # Указать имя ветки
   coutb = checkout -b
   commitback = checkout HEAD^
+  # Discard last commit
   commitundo = reset --soft HEAD^
   coutdevelop = checkout develop
-  discard = reset HEAD --hard
+  # Указать имя ветки
+  diffbranch = diff HEAD
   diffdevelop = log HEAD..develop
   diffstaged = diff --staged
-  fetchorigin = fetch origin
+  diffstat = diff --stat
+  f = fetch
+  # Указать имя файла
   fileundo = restore
+  # Указать имя файла
   fileunstage = restore --staged
   logpretty = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pushorigin = push origin HEAD
   s = status
+  sshort = status --short
+  # Указать паттерн
   search = grep
